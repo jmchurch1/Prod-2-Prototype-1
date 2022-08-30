@@ -523,8 +523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 4673553971497076703, guid: fc0f4b1e25067604185a6158ac57e46b, type: 3}
-  _flightSpeed: 10
-  _movementSpeed: 5
+  _flightSpeed: 20
+  _movementSpeed: 10
+  _barrageSpeed: 0.07
 --- !u!61 &8088634346057850968
 BoxCollider2D:
   m_ObjectHideFlags: 0

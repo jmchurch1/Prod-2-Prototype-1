@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Homing : MonoBehaviour
 {
-    public GameObject volleyball;
-    
     private Rigidbody2D _rigidbody;
 
     [SerializeField] private float _projectileSpeed = 1f;
@@ -17,8 +15,10 @@ public class Homing : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
-        gameObject.transform.position += volleyball.transform.position * _projectileSpeed * Time.deltaTime;
+        Transform projectile = GameObject.FindWithTag("Projectile").transform;
+        gameObject.transform.position += new Vector3(projectile.position.x, projectile.position.y, 0) * _projectileSpeed * Time.deltaTime;
     }
 }
+ 

@@ -886,5 +886,13 @@ PrefabInstance:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 4673553971497076703, guid: fc0f4b1e25067604185a6158ac57e46b, type: 3}
+    - target: {fileID: 8088634346057850983, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
+      propertyPath: _flightSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088634346057850983, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
+      propertyPath: _movementSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af16e963afca2974eb44b70a3b330a77, type: 3}

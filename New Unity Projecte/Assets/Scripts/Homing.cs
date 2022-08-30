@@ -12,13 +12,21 @@ public class Homing : MonoBehaviour
     private void Awake()
     {
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        StartCoroutine("DeathTimer");
     }
 
     // Update is called once per frame
     private void Update()
     {
         Transform projectile = GameObject.FindWithTag("Projectile").transform;
-        gameObject.transform.position += new Vector3(projectile.position.x, projectile.position.y, 0) * _projectileSpeed * Time.deltaTime;
+        Vector3 direction = (transform.position - projectile.position).normalized;
+        gameObject.transform.position -= direction * _projectileSpeed * Time.deltaTime;
+    }
+
+    private IEnumerator DeathTimer()
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
     }
 }
  

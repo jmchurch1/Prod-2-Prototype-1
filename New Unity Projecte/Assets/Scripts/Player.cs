@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float _flightSpeed = 3f;
 
     [SerializeField] private float _movementSpeed = 3f;
+
+    [SerializeField] private float _barrageSpeed = .07f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // movement keys
         if (Input.GetKey(KeyCode.W))
         {
             _rigidbody.AddForce(new Vector2(0f,_flightSpeed));
@@ -39,10 +42,27 @@ public class Player : MonoBehaviour
             _rigidbody.AddForce(new Vector2(-_movementSpeed,0f));
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
-
-        if (Input.GetMouseButton(0))
-            Instantiate(projectile,transform.position, Quaternion.identity);
-
+        
+        // shoot key
+        if (Input.GetMouseButtonDown(0))
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                StartCoroutine("ProjectileBarrage");
+            }
+        }
     }
+
+    // sends barrage of 4 projectiles with .2 second intervals between
+    private IEnumerator ProjectileBarrage()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            yield return new WaitForSeconds(.2f);
+            // Instantiate a projectile into the world at ______ position
+            Instantiate(projectile, transform.position, Quaternion.identity);
+        }
+    }
+    
     
 }

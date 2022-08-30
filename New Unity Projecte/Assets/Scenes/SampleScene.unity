@@ -777,6 +777,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1034041756681188577, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
+      propertyPath: _hitStrength
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 1034041756681188603, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
       propertyPath: m_Name
       value: Volleyball

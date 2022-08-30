@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject projectile;
+    
     private Rigidbody2D _rigidbody;
     private bool _onGround = true;
 
-    [SerializeField] private float _flightSpeed = 10f;
+    [SerializeField] private float _flightSpeed = 3f;
 
-    [SerializeField] private float _gravitySpeed = 5f;
-
-    [SerializeField] private float _movementSpeed = 5f;
+    [SerializeField] private float _movementSpeed = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,33 +24,25 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, Time.deltaTime * _flightSpeed, 0);
+            _rigidbody.AddForce(new Vector2(0f,_flightSpeed));
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(Time.deltaTime * _movementSpeed,0, 0);
+            _rigidbody.AddForce(new Vector2(_movementSpeed,0f));
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         
         
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= new Vector3(Time.deltaTime * _movementSpeed,0, 0);
+            _rigidbody.AddForce(new Vector2(-_movementSpeed,0f));
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
-        
-        if (!_onGround)
-            transform.position -= new Vector3(0, Time.deltaTime * _gravitySpeed, 0);
-    }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Border"))
-            _onGround = true;
-    }
+        if (Input.GetMouseButton(0))
+            Instantiate(projectile,transform.position, Quaternion.identity);
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Border"))
-            _onGround = false;
     }
+    
 }

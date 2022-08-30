@@ -184,8 +184,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480569033}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 11.58, y: 4.93, z: 0}
-  m_LocalScale: {x: 24.938002, y: 1, z: 1}
+  m_LocalPosition: {x: 16.3, y: 2.6, z: 0}
+  m_LocalScale: {x: 24.938002, y: 12.82, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 165879364}
@@ -379,8 +379,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559265969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.93, z: 0}
-  m_LocalScale: {x: 24.938, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 32.1, z: 0}
+  m_LocalScale: {x: 24.938, y: 46.1023, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 165879364}
@@ -490,8 +490,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819313630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.19, z: 0}
-  m_LocalScale: {x: 24.938, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -21.7, z: 0}
+  m_LocalScale: {x: 24.938, y: 31.88573, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 165879364}
@@ -575,11 +575,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1040516303 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1034041756681188604, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
-  m_PrefabInstance: {fileID: 1034041756578371696}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1637099431
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,8 +601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637099431}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -11.43, y: 4.93, z: 0}
-  m_LocalScale: {x: 24.938002, y: 1, z: 1}
+  m_LocalPosition: {x: -16.94, y: 2.37, z: 0}
+  m_LocalScale: {x: 24.938002, y: 12.732, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 165879364}
@@ -782,14 +777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1034041756681188577, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
-      propertyPath: Rbody
-      value: 
-      objectReference: {fileID: 1040516303}
-    - target: {fileID: 1034041756681188577, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
-      propertyPath: _hitStrength
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 1034041756681188603, guid: 87c6d99c66e5c254a97928f9d82351f9, type: 3}
       propertyPath: m_Name
       value: Volleyball
@@ -894,18 +881,6 @@ PrefabInstance:
     - target: {fileID: 8088634346057850982, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8088634346057850983, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 4673553971497076703, guid: fc0f4b1e25067604185a6158ac57e46b, type: 3}
-    - target: {fileID: 8088634346057850983, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
-      propertyPath: _flightSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8088634346057850983, guid: af16e963afca2974eb44b70a3b330a77, type: 3}
-      propertyPath: _movementSpeed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af16e963afca2974eb44b70a3b330a77, type: 3}

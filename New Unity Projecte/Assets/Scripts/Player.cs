@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public GameObject projectile;
     
     private Rigidbody2D _rigidbody;
-    private bool _onGround = true;
 
     [SerializeField] private float _flightSpeed = 3f;
 
@@ -58,7 +57,7 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(_barrageSpeed);
             // Instantiate a projectile into the world at ______ position
             Instantiate(projectile, transform.position, Quaternion.identity);
         }
